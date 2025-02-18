@@ -48,6 +48,7 @@ a {
     flex: 1;
     justify-content: space-evenly;
     padding: 20px 10px;
+    z-index: 1000;
 }
 
 .nav-middle {
@@ -69,9 +70,60 @@ a {
     }
 }
 
+.burger-menu, 
+.burger-menu-btn {
+    display: none;
+}
+
 
 /* Kõik siin on mobiilne vaade */
 @media (max-width: 430px) {
+
+    .burger-menu-btn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url(images/icons/burger-menu.png), url(images/icons/burger-menu-close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 50px;
+    }
+
+    .burger-menu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: whitesmoke;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-top: 2px solid black;
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid black;
+    }
+
+    .burger-menu ul li a {
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        padding: 30px 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
 
     .wrapper-main {
         width: 80%;
@@ -101,6 +153,7 @@ a {
         justify-content: center;
         padding-left: 10px;
     }
+
 }
 
 
