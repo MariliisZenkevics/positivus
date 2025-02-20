@@ -14,6 +14,7 @@ body {
     padding: 20px;
     color:black;
     background-color: white;
+    font-family: 'space grotesk', sans-serif;
 }
 
 a {
@@ -63,6 +64,14 @@ a {
 .nav-middle li a {
     color: black;
 }
+
+.request-btn {
+        cursor: pointer;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        background-color: white;
+    }
 
 @media (min-width: 769px) {
     .wrapper-main {
@@ -155,6 +164,10 @@ a {
         height: 40px;
         width: auto;
     
+    }
+
+    .request-btn {
+        display: none;
     }
 
 }
