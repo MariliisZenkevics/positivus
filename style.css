@@ -149,6 +149,20 @@ a {
             gap: 20px;
             filter: grayscale(100%);
         }
+
+        .services {
+            display: flex;
+            align-items: center;  
+             
+            gap: 5rem;
+            padding: 2rem;
+        }
+
+        .highlighted-text {
+            background-color: #B9FF66;
+        }
+
+    
     }
 
 
@@ -276,8 +290,21 @@ a {
         margin: 30px;
         filter: grayscale(100%)
     }
-       
+    
+    .services {
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+    }
 
+    .highlighted-text {
+        padding-bottom: 20px;
+        background-color: #B9FF66;
+        padding: 2px;
+    }
+    .desktop-break {
+        display: none;
+    }
 
 }
 
