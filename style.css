@@ -14,7 +14,13 @@ body {
     padding: 20px;
     color:black;
     background-color: white;
-    font-family: 'space grotesk', sans-serif;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif !important; 
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 a {
@@ -66,51 +72,84 @@ a {
 }
 
 .request-btn {
-        cursor: pointer;
-        border-radius: 10px;
-        width: 200px;
-        height: 50px;
-        background-color: white;
-    }
-
-@media (min-width: 769px) {
-    .wrapper-main {
-        width: 100%
-    }
-
-    .burger-menu, 
-    .burger-menu-btn {
-        display: none !important;
-    }
-
-/* siit alates vaja hakata timmima */
-    .header {
-        padding: 20px 0;
-        text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: white;
     }
     
-    .header h1 {
-        padding-bottom: 20px;
-    }
+    
+    
+    /* desktop view */
+    @media (min-width: 769px) {
+        .wrapper-main {
+            width: 100%
+        }
+        
+        .burger-menu, 
+        .burger-menu-btn {
+            display: none !important;
+        }
+        
+        
+        .header h1 {
+            padding-bottom: 30px;
+        }
+        
+        .header p {
+            padding-bottom: 20px;
+        }
+        
+        .consultation-btn {
+            cursor: pointer;
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            justify-self: end;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;  
+            justify-content: space-between; 
+            gap: 2rem;
+            padding: 2rem;
+            
+        }
+        
+        .text-container {
+            flex: 1; 
+            max-width: 100%;
+            padding: 0 20px;
+            line-height: 1.5;
+            
+        }
+        
+        .image-container {
+            padding: 10px 0;
+            width: 100%;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .header p {
-        padding-bottom: 20px;
+        .logotypes {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 30px;
+            gap: 20px;
+            filter: grayscale(100%);
+        }
     }
-
-    .consultation-btn {
-        cursor: pointer;
-        border-radius: 10px;
-        width: 200px;
-        height: 50px;
-        background-color: black;
-        color: white;
-    }
-
-    .header-illustration-image img {
-        padding: 10px 0;
-        width: 100%;
-    }
-}
 
 
 
@@ -200,6 +239,8 @@ a {
     .header {
         padding: 20px 0;
         text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
     
     .header h1 {
@@ -219,10 +260,24 @@ a {
         color: white;
     }
 
-    .header-illustration-image img {
-        padding: 10px 0;
+    .image-container img {
+        padding:  10px 0;
         width: 100%;
     }
+    
+    .text-container, .image-container {
+        max-width: 100%;
+    }
+
+    .logotypes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 30px;
+        filter: grayscale(100%)
+    }
+       
+
 
 }
 
