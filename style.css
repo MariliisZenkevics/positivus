@@ -251,6 +251,21 @@ hr {
     color: #555;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px;
+}
+
+.team-btn {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
 
 
 /* desktop view */
@@ -491,7 +506,8 @@ hr {
 
     .case-studies,
     .process,
-    .team {
+    .team,
+    .testimonials {
         display: flex;
         align-items: center;  
         gap: 5rem;
@@ -806,7 +822,8 @@ hr {
 
     .case-studies,
     .process,
-    .team {
+    .team,
+    .testimonials {
         text-align: center;
         flex-direction: column;
         display: flex;
@@ -839,6 +856,10 @@ hr {
     
     .team-container {
         grid-template-columns: 1fr; 
+    }
+
+    .button-container {
+        justify-content: center; 
     }
 }
 
