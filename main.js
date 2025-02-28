@@ -41,3 +41,56 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial");
+    const slider = document.querySelector(".testimonial-slider");
+    const dots = document.querySelectorAll(".dot");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    rightArrow.addEventListener("click", function () {
+        if (currentIndex < testimonials.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    });
+
+    leftArrow.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = testimonials.length - 1;
+        }
+        updateSlider();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
+
+    // Auto Slide Every 5 Seconds
+    setInterval(() => {
+        if (currentIndex < testimonials.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    }, 5000);
+});
