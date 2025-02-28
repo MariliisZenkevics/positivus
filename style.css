@@ -139,6 +139,8 @@ a:hover span {
     transition: all 0.3s ease;
     margin: 10px auto;
     width: 800px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px black;
 }
 
 .process-item.active {
@@ -190,6 +192,64 @@ a:hover span {
     transform: rotate(180deg);
 }
 
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.team-member {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px black;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.job-title {
+    font-size: 14px;
+    color: gray;
+}
+
+.linkedin-icon img{
+    height: 20px;
+    width: 20px;
+    
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+}
 
 
 
@@ -430,16 +490,14 @@ a:hover span {
     }
 
     .case-studies,
-    .process {
+    .process,
+    .team {
         display: flex;
         align-items: center;  
         gap: 5rem;
         padding: 2rem;
     }
-
-
-   
-        
+ 
 }
 
 
@@ -747,7 +805,8 @@ a:hover span {
     }
 
     .case-studies,
-    .process {
+    .process,
+    .team {
         text-align: center;
         flex-direction: column;
         display: flex;
@@ -773,7 +832,16 @@ a:hover span {
     .divider {
         display: none; 
     }
+    
+    .process-item {
+        width: auto;
+    }
+    
+    .team-container {
+        grid-template-columns: 1fr; 
+    }
 }
+
 
 
 /* Kõik siin on tahvli vaade */
