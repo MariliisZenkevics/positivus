@@ -373,6 +373,113 @@ hr {
     color: #B9FF66;
 }
 
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-form {
+    flex: 1;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.radio-option input {
+    display: none;
+}
+
+.custom-radio {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+}
+
+.radio-option input:checked + .custom-radio {
+    background-color: #B9FF66;
+    border-color: #B9FF66;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: white;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-btn {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.contact-decoration {
+    position: absolute;  
+    right: 0;  
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 40%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+}
+
+.contact-image {
+    max-width: 100%; 
+    height: auto;
+    object-fit: contain; 
+    padding-right: 0;
+}
+
 
 
 /* desktop */
@@ -614,7 +721,8 @@ hr {
     .case-studies,
     .process,
     .team,
-    .testimonials {
+    .testimonials,
+    .contact {
         display: flex;
         align-items: center;  
         gap: 5rem;
@@ -930,7 +1038,8 @@ hr {
     .case-studies,
     .process,
     .team,
-    .testimonials {
+    .testimonials,
+    .contact {
         text-align: center;
         flex-direction: column;
         display: flex;
@@ -986,6 +1095,19 @@ hr {
     .dots span {
         width: 8px;
         height: 8px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-decoration {
+        display: none;
+    }
+
+    .send-btn {
+        width: 100%;
     }
 }
 
